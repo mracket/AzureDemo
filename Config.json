@@ -1,0 +1,8 @@
+{
+    "ResourceGroup": [
+        {"Name": "AzureDemo-Networking"},
+        {"Name": "AzureDemo-Storage"},
+        {"Name": "AzureDemo-TestLab"}
+    ],
+    "Location": "WestEurope"
+}
