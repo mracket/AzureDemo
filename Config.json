@@ -9,13 +9,17 @@
         {        
             "Name": "AzureDemo-VNet",
             "AddressPrefix": "172.16.0.0/16",
-            "ResourceGroupName": "AzureDemo-Networking",
-            
-        }
-        
+            "ResourceGroupName": "AzureDemo-Networking"            
+        }        
     ],
     "Subnet": [
         {"Name": "AzureDemo-Subnet-Core","AddressPrefix": "172.16.0.0/24","VirtualNetwork": "AzureDemo-VNet"},
         {"Name": "AzureDemo-Subnet-CitrixCore", "AddressPrefix": "172.16.1.0/24","VirtualNetwork": "AzureDemo-VNet"}      
-    ] 
+    ],
+    "NetworkSecurityGroup": [
+        {"Name": "AzureDemo-NSG-Core", "ResourceGroupName": "AzureDemo-Networking"}
+    ], 
+    "NetworkSecurityGroupRules": [
+        {"Name": "RDP", "Description": "Allow RDP", "NetworkSecurityGroup": "AzureDemo-NSG-Core", "Protocol": "TCP", "Access": "Allow", "Direction": "Inbound", "Priority": "100", "SourceAddressPrefix": "85.191.114.172", "SourceAddressPortRange": "*", "DestinationAddressPrefix": "172.16.1.10", "DestinationPortRange": "3389"}
+    ]
 }
