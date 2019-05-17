@@ -1,3 +1,5 @@
-Remove-AzResourceGroup -Name "AzureDemo-Networking" -Force
-Remove-AzResourceGroup -Name "AzureDemo-Storage" -Force
-Remove-AzResourceGroup -Name "AzureDemo-TestLab" -Force
+$Config = Get-Content -Raw -Path /Users/martin/GitForVLog/AzureDemo/Config.json | ConvertFrom-Json
+
+Foreach ($ResourceGroup in ($($Config.ResourceGroup).Name)) {
+    Remove-AzResourceGroup -Name $ResourceGroup -Force
+}
