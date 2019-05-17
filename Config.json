@@ -9,10 +9,8 @@
         {        
             "Name": "AzureDemo-VNet",
             "AddressPrefix": "172.16.0.0/16",
-            "ResourceGroupName": "AzureDemo-Networking",
-            
-        }
-        
+            "ResourceGroupName": "AzureDemo-Networking"            
+        }        
     ],
     "Subnet": [
         {"Name": "AzureDemo-Subnet-Core","AddressPrefix": "172.16.0.0/24","VirtualNetwork": "AzureDemo-VNet"},
