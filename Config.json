@@ -5,6 +5,7 @@
         {"Name": "AzureDemo-TestLab"}
     ],
     "Location": "WestEurope",
+    "SubscriptionID": "d2eab8a3-2970-473d-8727-357c3ba6f0de",
     "VirtualNetwork": [
         {        
             "Name": "AzureDemo-VNet",
