@@ -4,5 +4,18 @@
         {"Name": "AzureDemo-Storage"},
         {"Name": "AzureDemo-TestLab"}
     ],
-    "Location": "WestEurope"
+    "Location": "WestEurope",
+    "VirtualNetwork": [
+        {        
+            "Name": "AzureDemo-VNet",
+            "AddressPrefix": "172.16.0.0/16",
+            "ResourceGroupName": "AzureDemo-Networking",
+            
+        }
+        
+    ],
+    "Subnet": [
+        {"Name": "AzureDemo-Subnet-Core","AddressPrefix": "172.16.0.0/24","VirtualNetwork": "AzureDemo-VNet"},
+        {"Name": "AzureDemo-Subnet-CitrixCore", "AddressPrefix": "172.16.1.0/24","VirtualNetwork": "AzureDemo-VNet"}      
+    ] 
 }
