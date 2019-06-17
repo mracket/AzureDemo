@@ -24,6 +24,7 @@
         {"Name": "RDP", "Description": "Allow RDP", "NetworkSecurityGroup": "AzureDemo-NSG-Core", "Protocol": "TCP", "Access": "Allow", "Direction": "Inbound", "Priority": "100", "SourceAddressPrefix": "85.191.114.172", "SourceAddressPortRange": "*", "DestinationAddressPrefix": "172.16.1.10", "DestinationPortRange": "3389"}
     ],
     "VM": [
-        {"Name": "DC01", "VMSize": "Standard_B2ms", "ResourceGroupName": "AzureDemo-TestLab", "VNet": "AzureDemo-VNet", "Subnet": "AzureDemo-Subnet-Core", "NIC": "DC01-NIC", "PublisherName": "MicrosoftWindowsServer", "Offer": "WindowsServer", "SKUs": "2012-R2-Datacenter", "LocalAdminUser": "LocalAdminUser", "LocalAdminSecurePassword": "AwesomeP@55Word!"}
+        {"Name": "DC01", "VMSize": "Standard_B2ms", "ResourceGroupName": "AzureDemo-TestLab", "VNet": "AzureDemo-VNet", "Subnet": "AzureDemo-Subnet-Core", "NIC": "DC01-NIC", "PublisherName": "MicrosoftWindowsServer", "Offer": "WindowsServer", "SKUs": "2016-Datacenter", "LocalAdminUser": "adminMTH", "LocalAdminSecurePassword": "AwesomeP@55Word!"},
+        {"Name": "MDT01", "VMSize": "Standard_B2ms", "ResourceGroupName": "AzureDemo-TestLab", "VNet": "AzureDemo-VNet", "Subnet": "AzureDemo-Subnet-Core", "NIC": "MDT01-NIC", "PublisherName": "MicrosoftWindowsServer", "Offer": "WindowsServer", "SKUs": "2016-Datacenter", "LocalAdminUser": "adminMTH", "LocalAdminSecurePassword": "AwesomeP@55Word!"}
     ]
 }
