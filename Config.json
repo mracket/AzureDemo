@@ -18,10 +18,12 @@
         {"Name": "AzureDemo-Subnet-CitrixCore", "AddressPrefix": "172.16.1.0/24","VirtualNetwork": "AzureDemo-VNet"}      
     ],
     "NetworkSecurityGroup": [
-        {"Name": "AzureDemo-NSG-Core", "ResourceGroupName": "AzureDemo-Networking"}
+        {"Name": "AzureDemo-NSG-Core", "ResourceGroupName": "AzureDemo-Networking"},
+        {"Name": "AzureDemo-NSG-CitrixCore", "ResourceGroupName": "AzureDemo-Networking"}
     ], 
     "NetworkSecurityGroupRules": [
-        {"Name": "RDP", "Description": "Allow RDP", "NetworkSecurityGroup": "AzureDemo-NSG-Core", "Protocol": "TCP", "Access": "Allow", "Direction": "Inbound", "Priority": "100", "SourceAddressPrefix": "85.191.114.172", "SourceAddressPortRange": "*", "DestinationAddressPrefix": "172.16.1.10", "DestinationPortRange": "3389"}
+        {"Name": "AzureDemo-Core-RDP", "Description": "Allow RDP", "NetworkSecurityGroup": "AzureDemo-NSG-Core", "Protocol": "TCP", "Access": "Allow", "Direction": "Inbound", "Priority": "100", "SourceAddressPrefix": "85.191.114.172", "SourceAddressPortRange": "*", "DestinationAddressPrefix": "172.16.0.4", "DestinationPortRange": "3389"},
+        {"Name": "AzureDemo-CitrixCore-RDP", "Description": "Allow RDP", "NetworkSecurityGroup": "AzureDemo-NSG-CitrixCore", "Protocol": "TCP", "Access": "Allow", "Direction": "Inbound", "Priority": "100", "SourceAddressPrefix": "85.191.114.172", "SourceAddressPortRange": "*", "DestinationAddressPrefix": "172.16.1.4", "DestinationPortRange": "3389"}
     ],
     "VM": [
         {"Name": "DC01", "VMSize": "Standard_B2ms", "ResourceGroupName": "AzureDemo-TestLab", "VNet": "AzureDemo-VNet", "Subnet": "AzureDemo-Subnet-Core", "NIC": "DC01-NIC", "PublisherName": "MicrosoftWindowsServer", "Offer": "WindowsServer", "SKUs": "2016-Datacenter", "LocalAdminUser": "adminMTH", "LocalAdminSecurePassword": "AwesomeP@55Word!"},
