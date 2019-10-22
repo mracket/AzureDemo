@@ -1,1 +1,1 @@
-Write-Output "Welcome to this video series about automation in Azure"
+Write-Output "Welcome to DKCUGC XL - This will be an awesome day!"
